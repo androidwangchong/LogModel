@@ -64,7 +64,7 @@ class LogUtils {
     /**
      * 添加打印log规则
      */
-    fun addPrettyFormatStrategy() {
+    fun addFormatStrategy() {
         Logger.addLogAdapter(object : AndroidLogAdapter(prettyFormatStrategy.build()) {
             override fun isLoggable(priority: Int, tag: String?): Boolean {
                 return BuildConfig.DEBUG
